@@ -6,7 +6,9 @@ describe('MIT', () => {
     test('Object properties present', () => {
         expect(mit).toHaveProperty('city');
         expect(mit).toHaveProperty('colors');
-        expect(mit).toHaveProperty('mascot');
+        expect(mit).toHaveProperty('mascott');
+        expect(mit).toHaveProperty('founded');
+        expect(mit).toHaveProperty('motto');
     });
 
     test('City match', () => {
@@ -14,7 +16,11 @@ describe('MIT', () => {
     });
 
     test('Colors match', () => {
-        expect(mit.colors).toContain('Silver Gray');    
+        expect(mit.colors).toContain('Black,steel Gray Cardinal');    
+    });
+
+    test('mascot', () => {
+        expect(mit.mascott).toBe('Tim the Beaver');
     });
 
     test('Founded range', () => {
@@ -23,6 +29,6 @@ describe('MIT', () => {
     });
 
     test('Motto', () => {
-        expect(mit.motto).toMatch('Mens');
+        expect(mit.motto).toMatch('mens et manus');
     });
 });
